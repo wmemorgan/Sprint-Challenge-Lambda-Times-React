@@ -56,6 +56,6 @@ export const CarouselButtons = styled.div`
 
 export const ImageContainer = styled.div`
   width: 95%;
-  max-width: 600px;
+  max-width: 1200px;
 
 `
