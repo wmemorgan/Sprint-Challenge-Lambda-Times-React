@@ -9,6 +9,7 @@ export const TopBarDesign = styled.div`
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 10;
 `
 
 export const Container = styled.div`
