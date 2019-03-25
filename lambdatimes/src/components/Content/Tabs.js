@@ -12,7 +12,7 @@ const Tabs = props => {
         {
           tabs.map((tab, index) => (
             <Tab
-              key={`${tab.headline}-${index}`}
+              key={index}
               selectTabHandler={selectTabHandler}
               selectedTab={selectedTab}
               tab={tab}
