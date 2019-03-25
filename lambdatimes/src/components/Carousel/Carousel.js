@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { carouselData } from '../../data'
 // Complete this Carousel 
 export default class Carousel extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-
+      data: [],
+      selection: 0
     }
   }
-  componentDidMount(){
-
+  componentDidMount() {
+    this.setState({ data: carouselData })
   }
 
   leftClick = () => {
@@ -21,10 +22,11 @@ export default class Carousel extends Component {
   }
 
   selectedImage = () => {
-    return <img src={} style={{display: 'block'}} />
+    const { data, selection } = this.state
+    return <img src={data[selection]} style={{ display: 'block' }} />
   }
-  
-  render(){
+
+  render() {
     return (
       <div className="carousel">
         <div className="left-button" onClick={this.leftClick}>{"<"}</div>
