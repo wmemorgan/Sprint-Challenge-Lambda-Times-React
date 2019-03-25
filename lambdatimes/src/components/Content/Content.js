@@ -19,11 +19,9 @@ export default class Content extends Component {
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
     // Load data into state
-    this.setState(prevState => {
-      return {
-        tabs: [...prevState.tabs, tabData],
-        cards: [...prevState.cards, cardData]
-      }
+    this.setState({
+      tabs: tabData,
+      cards: cardData
     })
   }
 
