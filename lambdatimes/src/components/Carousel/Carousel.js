@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CarouselContainer, CarouselButtons } from '../Carousel/CarouselStyles'
 import { carouselData } from '../../data'
 // Complete this Carousel 
 export default class Carousel extends Component {
@@ -47,11 +48,11 @@ export default class Carousel extends Component {
 
   render() {
     return (
-      <div className="carousel">
+      <CarouselContainer>
         {this.selectedImage()}
-        <div className="left-button" onClick={this.leftClick}>{"<"}</div>
-        <div className="right-button" onClick={this.rightClick}>{">"}</div>
-      </div>
+        <CarouselButtons leftButton>{"<"}</CarouselButtons>
+        <CarouselButtons rightButton>{">"}</CarouselButtons>
+      </CarouselContainer>
     )
   }
 }
