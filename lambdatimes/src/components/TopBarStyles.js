@@ -1,24 +1,19 @@
 import styled from 'styled-components'
+import { color, colorScheme, flex } from './StyleComponents/theme'
 
 export const TopBarDesign = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: none;
-  flex-direction: row;
+  ${flex('row','none','center')};
   position: fixed;
   height: 44px;
-  background-color: #333;
+  background: ${color.primaryColor};
   z-index: 10;
 `
 
 export const Container = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: row;
-  color: #fff;
+  ${flex('row','none','none')};
+  color: ${colorScheme.headerFontColor};
   letter-spacing: 1px;
   padding: 0 10px;
 
@@ -29,10 +24,7 @@ export const Container = styled.div`
 `
 
 export const ContainerLeft = styled.div`
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: row;
+${flex('row','center','none')};
   flex: 1;
   font-size: 11px;
 
@@ -44,10 +36,7 @@ export const ContainerLeft = styled.div`
 `
 
 export const ContainerCenter = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  ${flex('row','center','center')};
   flex: 3;
   font-size: 9px;
 
@@ -66,11 +55,7 @@ export const ContainerCenter = styled.div`
 `
 
 export const ContainerRight = styled.div`
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
+  ${flex('row','center','flex-end')};
   flex: 1;
   font-size: 11px;
   font-weight: bold;

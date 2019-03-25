@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import Tab from './Tab';
+import { TabsContainer, Topics, Title } from './TabStyles'
+
 const Tabs = props => {
   const { tabs, selectedTab, selectTabHandler } = props
   return (
-    <div className="tabs">
-      <div className="topics">
-        <span className="title">TRENDING TOPICS:</span>
+    <TabsContainer>
+      <Topics>
+        <Title>TRENDING TOPICS:</Title>
         {/* map over the tabs provided on your props, create a new Tab component for each one.
             give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props*/}
         {
@@ -19,9 +21,8 @@ const Tabs = props => {
             />
           ))  
         }
- 
-      </div>
-    </div>
+      </Topics>
+    </TabsContainer>
   );
 };
 
