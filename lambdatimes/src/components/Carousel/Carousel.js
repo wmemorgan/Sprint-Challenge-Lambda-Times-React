@@ -50,8 +50,8 @@ export default class Carousel extends Component {
     return (
       <CarouselContainer>
         {this.selectedImage()}
-        <CarouselButtons leftButton>{"<"}</CarouselButtons>
-        <CarouselButtons rightButton>{">"}</CarouselButtons>
+        <CarouselButtons onClick={this.leftClick} leftButton>{"<"}</CarouselButtons>
+        <CarouselButtons onClick={this.rightClick} rightButton>{">"}</CarouselButtons>
       </CarouselContainer>
     )
   }
