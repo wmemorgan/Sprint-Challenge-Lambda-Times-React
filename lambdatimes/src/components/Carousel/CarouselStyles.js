@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { flex, color } from '../StyleComponents/theme'
+import { flex, color, breakpoints, fontSizing } from '../StyleComponents/theme'
 
 export const CarouselContainer = styled.div`
     width: 100%;
@@ -11,16 +11,20 @@ export const CarouselContainer = styled.div`
   }
 
   @media (min-width: 1200px) {
-    .carousel {
       width: 1200px;
-    }
+  }
+
+  @media ${breakpoints[0]} {
+    height: 200px;
+    margin-top: 10px;
+  }
 `
 
 export const CarouselButtons = styled.div`
   ${flex('row','none','center')};
   color: ${color.lightText};
   background: ${color.primaryColor};;
-  font-size: 40px;
+  font-size: ${fontSizing.l};
   border-radius: 50%;
   position: absolute;
   width: 50px;
@@ -48,6 +52,10 @@ export const CarouselButtons = styled.div`
       transform: translate(0, -50%);
   `}
 
+`
 
+export const ImageContainer = styled.div`
+  width: 95%;
+  max-width: 600px;
 
 `
