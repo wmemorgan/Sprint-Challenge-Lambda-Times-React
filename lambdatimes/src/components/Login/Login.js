@@ -46,7 +46,7 @@ class Login extends Component {
     console.log(`Login render localStorage: `, JSON.parse(localStorage.getItem('username')))
     return (
       <LoginContainer>
-        <Logo>Instaclone</Logo>
+        <Logo>Lambda Times</Logo>
         <Form onSubmit={this.login} login>
           <input
             type="text"

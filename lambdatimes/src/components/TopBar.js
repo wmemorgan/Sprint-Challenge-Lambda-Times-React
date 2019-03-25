@@ -16,7 +16,10 @@ const TopBar = () => {
           <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
         </ContainerCenter>
         <ContainerRight>
-          <span>LOG IN</span>
+          <span>{JSON.parse(localStorage.getItem('username')) ? 
+            `${JSON.parse(localStorage.getItem('username')).username}
+            LOG OUT` : 
+            'LOG IN'}</span>
         </ContainerRight>
       </Container>
     </TopBarDesign>

@@ -1,6 +1,6 @@
 const theme = {
   color: {
-    primaryColor: '#1363A8',
+    primaryColor: '#333',
     primaryDark: '#0F5080',
     primaryBgShading: '#F5F8FA',
     secondaryColor: '#4195D2',
@@ -27,8 +27,8 @@ const theme = {
   },
 
   fontStyles: {
-    logoFont: "'Oleo Script', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif",
-    headingFont: "Roboto, 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif",
+    logoFont: "Didot, serif",
+    headingFont: "Didot, serif",
     defaultFont: "'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif"
   },
 

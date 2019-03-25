@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Header from '../Header'
 import Tabs from './Tabs';
 import Carousel from '../Carousel/Carousel'
 import Cards from './Cards';
@@ -56,11 +56,14 @@ export default class Content extends Component {
 
   render() {
     return (
+      <>
+      <Header />
       <div className="content-container">
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
         <Carousel/>
         <Cards cards={this.state.cards} />
       </div>
+      </>
     );
   }
 }
