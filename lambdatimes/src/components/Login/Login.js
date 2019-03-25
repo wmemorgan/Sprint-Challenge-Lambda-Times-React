@@ -42,8 +42,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log(`Login render this.state`, this.state)
-    console.log(`Login render localStorage: `, JSON.parse(localStorage.getItem('username')))
     return (
       <LoginContainer>
         <Logo>Lambda Times</Logo>
