@@ -21,7 +21,9 @@ body * {
 }
 
 body {
+  color: ${color.lightText};
   background: ${color.primaryBgShading};
+  font-family: ${fontStyles.defaultFont}  
 }
 
 h1, h2, h3, h4, h5 {

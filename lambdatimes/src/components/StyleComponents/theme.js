@@ -29,7 +29,7 @@ const theme = {
   fontStyles: {
     logoFont: "Didot, serif",
     headingFont: "Didot, serif",
-    defaultFont: "'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif"
+    defaultFont: "'PT Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif"
   },
 
   fontSizing: { // Based on CSS default font-resizing of 62.5%
