@@ -27,35 +27,31 @@ export default class Content extends Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    this.setState({selected: tab.selected})
+    this.setState({selected: tab})
   };
 
   filterCards = () => {
-    /* Right now this function only returns the cards on state.
-      We're going to make this function more dynamic
-      by using it to filter out our cards for when a tab is selcted
-      
-      Notice that we're passing this function to our <Cards /> component below.
-      This function returns an array of cards, so we can just pass it down as such.
-
-      Your algorithim for the logic here is as follows: 
-        - if the selected tab is 'all' it should return all 
-          of the items from cardData. 
-        - else, it should only return those cards whose 'tab' matched this.state.selected.
-    */
    if (this.state.selected === 'all') {
     /* if the selected tab is 'all' it should return all
     of the items from cardData. */
+    this.setState({cards: cardData})
      return this.state.cards;
    } else { /* else, it should only return those cards whose 'tab' matched this.state.selected. */
-     this.setState(prevState => {
+     this.setState(() => {
        // filter cards array based on tab selection
-       let filteredCards = prevState.cards.filter(card => card.tab !== this.state.selected)
+       let filteredCards = cardData.filter(card => card.tab === this.state.selected)
        return { cards: filteredCards }
      })
+     return this.state.cards
    }
     
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.selected !== this.state.selected) {
+      this.filterCards()
+    }
+  }
 
   render() {
     return (
@@ -66,7 +62,7 @@ export default class Content extends Component {
           and `selectTabHandler` that includes the function to change the selected tab
         */}
         <Tabs tabs={this.state.tabs} selectedTab={this.state.selected} selectTabHandler={this.changeSelected}/>
-        <Cards cards={this.filterCards()} />
+        <Cards cards={this.state.cards} />
       </div>
     );
   }
