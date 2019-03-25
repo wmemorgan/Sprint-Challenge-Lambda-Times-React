@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { color, colorScheme, fontSizing, flex } from '../StyleComponents/theme'
+import { color, colorScheme, fontSizing, flex, breakpoints } from '../StyleComponents/theme'
 
 export const TabsContainer = styled.div`
   width: 100%;
@@ -11,14 +11,31 @@ export const TabsContainer = styled.div`
   @media (min-width: 1280px) {
     width: 1280px;
   }
+
+  @media ${breakpoints[0]} {
+    width: 95%;
+    max-width: 600px;
+    flex-wrap: wrap;
+  }
 }
 `
 
 export const Topics = styled.div`
   ${flex('row','center','none')}
+  flex-wrap: wrap;
+
+  @media ${breakpoints[0]} {
+    justify-content: space-between;
+    & * {
+      margin: 10px 0;
+    }
+  }
+  
 `
 
 export const Title = styled.span`
+  width: 100%;
+  text-align: center;
   font-size: ${fontSizing.xs}
 `
 
